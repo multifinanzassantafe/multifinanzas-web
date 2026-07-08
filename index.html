@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Multifinanzas Santa Fe | Soluciones Financieras</title>
+<title>Multifinanzas Santa Fe | 19 años de trayectoria</title>
+
+<meta name="description" content="Créditos personales, préstamos por recibo de sueldo y CBU. Consulta y gestión sin cargo. Más de 19 años de experiencia.">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -14,12 +16,17 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:Poppins,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-background:#f4f7fb;
-color:#1d3557;
+background:#f5f7fb;
+color:#23395d;
+line-height:1.6;
 }
 
 .container{
@@ -29,12 +36,11 @@ margin:auto;
 }
 
 header{
-background:#ffffff;
 position:fixed;
-top:0;
-left:0;
 width:100%;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
+top:0;
+background:#ffffff;
+box-shadow:0 2px 20px rgba(0,0,0,.08);
 z-index:1000;
 }
 
@@ -42,30 +48,29 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 0;
+padding:18px 0;
 }
 
 .logo{
-font-size:28px;
-font-weight:700;
+font-size:30px;
+font-weight:800;
 color:#0b3c73;
 }
 
 .logo span{
-color:#c9a227;
+color:#d4af37;
 }
 
 .menu{
 display:flex;
-list-style:none;
 gap:30px;
+list-style:none;
 }
 
 .menu a{
 text-decoration:none;
-color:#1d3557;
-font-weight:500;
-transition:.3s;
+font-weight:600;
+color:#23395d;
 }
 
 .menu a:hover{
@@ -74,11 +79,12 @@ color:#0b3c73;
 
 .btn{
 background:#25D366;
-color:white;
+color:#fff;
 padding:14px 28px;
-border-radius:50px;
+border-radius:40px;
 text-decoration:none;
 font-weight:600;
+display:inline-block;
 transition:.3s;
 }
 
@@ -87,53 +93,92 @@ transform:translateY(-3px);
 }
 
 .hero{
-padding:170px 0 120px;
+padding:160px 0 90px;
+background:linear-gradient(135deg,#0b3c73,#144f95);
+color:white;
 }
 
 .hero-grid{
 display:grid;
-grid-template-columns:1fr 1fr;
+grid-template-columns:1.2fr .8fr;
 align-items:center;
 gap:50px;
 }
 
 .hero h1{
-font-size:56px;
+font-size:55px;
 line-height:1.1;
-margin-bottom:25px;
-}
-
-.hero h1 span{
-color:#0b3c73;
+margin-bottom:20px;
 }
 
 .hero p{
 font-size:20px;
-color:#666;
-margin-bottom:40px;
+margin-bottom:35px;
+opacity:.95;
 }
 
 .hero img{
 width:100%;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
+
+.info{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.info div{
+background:rgba(255,255,255,.15);
+padding:18px;
+border-radius:12px;
+min-width:180px;
+}
+
+section{
+padding:90px 0;
+}
+
+.titulo{
+text-align:center;
+margin-bottom:60px;
+}
+
+.titulo h2{
+font-size:42px;
+color:#0b3c73;
+margin-bottom:15px;
+}
+
+.titulo p{
+font-size:18px;
+color:#666;
+max-width:800px;
+margin:auto;
 }
 
 .cards{
 display:grid;
-grid-template-columns:repeat(4,1fr);
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
-margin-top:80px;
 }
 
 .card{
-background:white;
+background:#fff;
 padding:35px;
-border-radius:15px;
+border-radius:18px;
 box-shadow:0 10px 30px rgba(0,0,0,.08);
-text-align:center;
 }
 
 .card h3{
 margin:15px 0;
+color:#0b3c73;
+}
+
+.card p{
+color:#555;
 }
 
 @media(max-width:900px){
@@ -147,12 +192,8 @@ text-align:center;
 display:none;
 }
 
-.cards{
-grid-template-columns:1fr;
-}
-
 .hero h1{
-font-size:40px;
+font-size:38px;
 }
 
 }
@@ -175,17 +216,14 @@ Multifinanzas <span>Santa Fe</span>
 
 <ul class="menu">
 
-<li><a href="#">Inicio</a></li>
-
-<li><a href="#">Servicios</a></li>
-
-<li><a href="#">Nosotros</a></li>
-
-<li><a href="#">Contacto</a></li>
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#nosotros">Nosotros</a></li>
+<li><a href="#creditos">Créditos</a></li>
+<li><a href="#contacto">Contacto</a></li>
 
 </ul>
 
-<a href="https://wa.me/5493425663817" class="btn">
+<a class="btn" href="https://wa.me/5493425663817">
 WhatsApp
 </a>
 
@@ -195,7 +233,7 @@ WhatsApp
 
 </header>
 
-<section class="hero">
+<section class="hero" id="inicio">
 
 <div class="container hero-grid">
 
@@ -203,72 +241,57 @@ WhatsApp
 
 <h1>
 
-La financiación que necesitás
-<span>con la confianza que buscás.</span>
+19 años acompañando tus proyectos financieros
 
 </h1>
 
 <p>
 
-Préstamos personales, créditos y asesoramiento financiero con atención personalizada para ayudarte a cumplir tus objetivos.
+Consulta y gestión totalmente sin cargo.
+Créditos con descuento por recibo de sueldo o por CBU.
+Cuotas fijas en pesos y atención personalizada.
 
 </p>
 
-<a href="https://wa.me/5493425663817" class="btn">
+<a class="btn" href="https://wa.me/5493425663817">
 
 Solicitar Asesoramiento
 
 </a>
 
+<div class="info">
+
+<div>
+
+<strong>✔ 19 años</strong><br>
+
+de experiencia
+
 </div>
 
 <div>
 
-<img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900" alt="Finanzas">
+<strong>✔ Sin costo</strong><br>
+
+Consulta y gestión
+
+</div>
+
+<div>
+
+<strong>✔ Cuotas fijas</strong><br>
+
+En pesos
 
 </div>
 
 </div>
 
-<div class="cards">
-
-<div class="card">
-
-<h2>💰</h2>
-
-<h3>Préstamos</h3>
-
-<p>Opciones rápidas y seguras para tus necesidades.</p>
-
 </div>
 
-<div class="card">
+<div>
 
-<h2>🏦</h2>
-
-<h3>Créditos</h3>
-
-<p>Soluciones adaptadas a cada cliente.</p>
-
-</div>
-
-<div class="card">
-
-<h2>📈</h2>
-
-<h3>Financiación</h3>
-
-<p>Te ayudamos a concretar tus proyectos.</p>
-
-</div>
-
-<div class="card">
-
-<h2>🤝</h2>
-
-<h3>Asesoramiento</h3>
-
-<p>Atención personalizada de principio a fin.</p>
+<img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900" alt="Multifinanzas">
 
 </div>
 
@@ -276,21 +299,288 @@ Solicitar Asesoramiento
 
 </section>
 <!-- =========================
-      POR QUÉ ELEGIRNOS
+        NOSOTROS
 ========================== -->
 
-<section style="padding:90px 0;background:#ffffff;">
+<section id="nosotros">
 
 <div class="container">
 
-<div style="text-align:center;margin-bottom:60px;">
+<div class="titulo">
 
-<h2 style="font-size:42px;color:#0b3c73;">
+<h2>¿Quiénes Somos?</h2>
+
+<p>
+
+En <strong>Multifinanzas Santa Fe</strong> contamos con más de
+<strong>19 años de trayectoria</strong>, brindando soluciones financieras
+con transparencia, responsabilidad y atención personalizada.
+
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>🤝 Nuestra Misión</h3>
+
+<p>
+
+Acompañar a cada cliente ofreciendo la mejor alternativa financiera,
+con asesoramiento profesional y un trato personalizado.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>⭐ Nuestra Experiencia</h3>
+
+<p>
+
+Durante 19 años hemos ayudado a miles de clientes a concretar
+sus proyectos mediante soluciones financieras confiables.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>💚 Nuestro Compromiso</h3>
+
+<p>
+
+Consulta y gestión totalmente sin cargo,
+porque creemos que el asesoramiento debe ser claro,
+honesto y accesible para todos.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+      LINEAS DE CREDITO
+========================== -->
+
+<section id="creditos" style="background:#eef5fb;">
+
+<div class="container">
+
+<div class="titulo">
+
+<h2>Nuestras Líneas de Crédito</h2>
+
+<p>
+
+Trabajamos con distintas líneas de financiación para adaptarnos
+a las necesidades de cada cliente.
+
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>👨‍💼 Empleados Públicos</h3>
+
+<p>
+
+✔ Provinciales de Santa Fe.<br>
+
+✔ Municipales de Santa Fe.<br>
+
+✔ Concejo Municipal de Santa Fe.<br>
+
+✔ Comuna de Arroyo Leyes.<br>
+
+✔ Empleados Provinciales de CABA (Sistema SID).<br>
+
+✔ Poder Judicial.<br>
+
+✔ Poder Legislativo.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>👴 Jubilados y Pensionados</h3>
+
+<p>
+
+✔ Jubilados Nacionales.<br>
+
+✔ Pensionados Nacionales.<br>
+
+✔ Código 14.<br>
+
+✔ Código 15.<br>
+
+✔ Pensiones Graciables.<br>
+
+✔ Madres de 7 Hijos.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>👮 Fuerzas de Seguridad</h3>
+
+<p>
+
+✔ Policía Federal Argentina.<br>
+
+✔ Retirados de las Fuerzas.<br>
+
+✔ Descuento por recibo.<br>
+
+✔ Descuento por decreto.<br>
+
+✔ Créditos por CBU.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🏦 Convenios Bancarios</h3>
+
+<p>
+
+✔ Banco Nación.<br>
+
+✔ Banco Santa Fe.<br>
+
+✔ Otros Bancos.<br>
+
+✔ Créditos por CBU.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+   CARACTERISTICAS
+========================== -->
+
+<section>
+
+<div class="container">
+
+<div class="titulo">
+
+<h2>Características de Nuestros Créditos</h2>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>💰 Consulta sin cargo</h3>
+
+<p>
+
+No cobramos la consulta ni la gestión del crédito.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>📅 Plazos</h3>
+
+<p>
+
+Descuento por recibo:<br>
+
+<strong>6 a 36 cuotas.</strong><br><br>
+
+Créditos por CBU:<br>
+
+<strong>6 a 24 cuotas.</strong>
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>💵 Cuotas</h3>
+
+<p>
+
+✔ Cuotas fijas.<br>
+
+✔ En pesos.<br>
+
+✔ Descuento por recibo o CBU.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>📋 Evaluación</h3>
+
+<p>
+
+Se analizan situaciones con antecedentes en Veraz.
+
+Cada solicitud está sujeta a evaluación crediticia.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- =========================
+      ¿POR QUÉ ELEGIRNOS?
+========================== -->
+
+<section style="background:#0b3c73;color:white;padding:90px 0;">
+
+<div class="container">
+
+<div class="titulo">
+
+<h2 style="color:white;">
 ¿Por qué elegir Multifinanzas Santa Fe?
 </h2>
 
-<p style="margin-top:15px;color:#666;font-size:18px;">
-Trabajamos para ofrecerte soluciones financieras claras, rápidas y confiables.
+<p style="color:#d9e6f2;">
+
+Más de 19 años brindando soluciones financieras con responsabilidad,
+confromiso y atención personalizada.
+
 </p>
 
 </div>
@@ -299,48 +589,48 @@ Trabajamos para ofrecerte soluciones financieras claras, rápidas y confiables.
 
 <div class="card">
 
-<h2>⚡</h2>
-
-<h3>Respuesta rápida</h3>
+<h3>✔ 19 años de experiencia</h3>
 
 <p>
-Atendemos tu consulta con rapidez para brindarte una solución en el menor tiempo posible.
+
+Trayectoria y confianza al servicio de nuestros clientes.
+
 </p>
 
 </div>
 
 <div class="card">
 
-<h2>🔒</h2>
-
-<h3>Confianza</h3>
+<h3>✔ Consulta sin cargo</h3>
 
 <p>
-Nos caracteriza la transparencia y el compromiso con cada cliente.
+
+Respondemos todas tus dudas sin ningún costo.
+
 </p>
 
 </div>
 
 <div class="card">
 
-<h2>👨‍💼</h2>
-
-<h3>Atención personalizada</h3>
+<h3>✔ Gestión gratuita</h3>
 
 <p>
-Analizamos cada caso para ofrecer una alternativa acorde a tus necesidades.
+
+No cobramos gastos administrativos por gestionar tu crédito.
+
 </p>
 
 </div>
 
 <div class="card">
 
-<h2>⭐</h2>
-
-<h3>Experiencia</h3>
+<h3>✔ Atención personalizada</h3>
 
 <p>
-Nuestro objetivo es acompañarte en cada paso de tu gestión financiera.
+
+Te acompañamos durante todo el proceso hasta obtener la mejor alternativa.
+
 </p>
 
 </div>
@@ -349,83 +639,62 @@ Nuestro objetivo es acompañarte en cada paso de tu gestión financiera.
 
 </div>
 
-</section>
 </section>
 
 <!-- =========================
-      QUIÉNES SOMOS
+        CONTACTO
 ========================== -->
 
-<section style="padding:90px 0;background:#f7f9fc;">
+<section id="contacto" style="padding:100px 0;background:#ffffff;">
 
 <div class="container">
 
-<div style="max-width:900px;margin:auto;text-align:center;">
+<div style="text-align:center;">
 
-<h2 style="font-size:42px;color:#0b3c73;margin-bottom:25px;">
+<h2 style="font-size:45px;color:#0b3c73;">
 
-19 años construyendo confianza
-
-</h2>
-
-<p style="font-size:20px;color:#555;line-height:1.8;">
-
-En <strong>Multifinanzas Santa Fe</strong> contamos con <strong>19 años de trayectoria</strong> brindando soluciones financieras a personas, familias y trabajadores que buscan respaldo, seriedad y una atención verdaderamente personalizada.
-
-</p>
-
-<p style="font-size:20px;color:#555;line-height:1.8;margin-top:25px;">
-
-Nuestra experiencia nos permite acompañar a cada cliente con transparencia, compromiso y profesionalismo, ayudándolo a encontrar la alternativa financiera más adecuada para cada necesidad.
-
-</p>
-
-<p style="font-size:20px;color:#555;line-height:1.8;margin-top:25px;">
-
-Durante todos estos años hemos construido relaciones basadas en la confianza, el respeto y la responsabilidad, valores que siguen siendo el motor de nuestro trabajo diario.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-      CONTACTO
-========================== -->
-<!-- =========================
-      CONTACTO
-========================== -->
-
-<section style="padding:100px 0;background:#0b3c73;color:white;">
-
-<div class="container" style="text-align:center;">
-
-<h2 style="font-size:45px;margin-bottom:20px;">
-
-¿Necesitás asesoramiento?
+Solicitá tu Asesoramiento
 
 </h2>
 
-<p style="font-size:20px;max-width:700px;margin:auto;margin-bottom:40px;">
+<p style="font-size:20px;color:#666;max-width:850px;margin:30px auto;line-height:1.8;">
 
-Comunicate con nosotros por WhatsApp y recibí atención personalizada.
+Nuestro equipo está preparado para asesorarte de manera
+personalizada y ayudarte a encontrar la mejor alternativa financiera.
+
+<br><br>
+
+✔ Consulta sin cargo.<br>
+
+✔ Gestión gratuita.<br>
+
+✔ Respuesta rápida.
 
 </p>
 
 <a href="https://wa.me/5493425663817"
 class="btn"
-style="font-size:20px;">
+style="font-size:22px;padding:18px 45px;">
 
-💬 Escribir por WhatsApp
+💬 Hablar por WhatsApp
 
 </a>
 
-<div style="margin-top:40px;font-size:30px;font-weight:700;">
+<div style="margin-top:50px;">
+
+<h3 style="color:#0b3c73;">
 
 📞 +54 9 342 566-3817
+
+</h3>
+
+<p style="margin-top:15px;font-size:18px;color:#555;">
+
+Santa Fe - Argentina
+
+</p>
+
+</div>
 
 </div>
 
@@ -433,12 +702,17 @@ style="font-size:20px;">
 
 </section>
 
-<footer style="background:#08284d;color:white;padding:30px 0;">
+<footer style="background:#08284d;color:white;padding:50px 0;">
 
-<div class="container"
-style="text-align:center;">
+<div class="container">
 
-<h3 style="margin-bottom:10px;">
+<div style="display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;">
+
+<div>
+
+<h3 style="margin-bottom:20px;">
 
 Multifinanzas Santa Fe
 
@@ -446,19 +720,97 @@ Multifinanzas Santa Fe
 
 <p>
 
-Préstamos • Créditos • Financiación • Asesoramiento
+Más de 19 años brindando soluciones financieras,
+atención personalizada y asesoramiento profesional.
 
 </p>
 
-<p style="margin-top:20px;font-size:14px;opacity:.8;">
+</div>
 
-© 2026 Todos los derechos reservados.
+<div>
+
+<h3 style="margin-bottom:20px;">
+
+Servicios
+
+</h3>
+
+<p>
+
+Préstamos Personales<br>
+
+Créditos por Recibo<br>
+
+Créditos por CBU<br>
+
+Asesoramiento Financiero
+
+</p>
+
+</div>
+
+<div>
+
+<h3 style="margin-bottom:20px;">
+
+Contacto
+
+</h3>
+
+<p>
+
+📞 +54 9 342 566-3817
+
+</p>
+
+<p>
+
+💬 WhatsApp
+
+</p>
+
+</div>
+
+</div>
+
+<hr style="margin:40px 0;border:1px solid rgba(255,255,255,.15);">
+
+<p style="text-align:center;opacity:.8;">
+
+© 2026 Multifinanzas Santa Fe.
+Todos los derechos reservados.
 
 </p>
 
 </div>
 
 </footer>
+
+<!-- BOTÓN FLOTANTE -->
+
+<a href="https://wa.me/5493425663817"
+target="_blank"
+style="
+position:fixed;
+right:25px;
+bottom:25px;
+background:#25D366;
+color:white;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:32px;
+text-decoration:none;
+box-shadow:0 10px 30px rgba(0,0,0,.30);
+z-index:9999;
+">
+
+💬
+
+</a>
 
 </body>
 
